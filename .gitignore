@@ -1,5 +1,21 @@
 *.pdf
+
 **/assets/.$*.bkp
+
+scratch/
+
+# BEGIN: From <https://searchfox.org/firefox-main/rev/50abc35bf42ac7aede2b0a18f3cd10c266cc41d5/.gitignore#408-417>
+# Ignore personal preferences files
+CLAUDE.local.md
+**/.claude/settings.local.json
+
+# Ignore claude scheduled task lock file
+**/.claude/scheduled_tasks.lock
+
+# Ignore Claude Code worktrees
+**/.claude/worktrees/
+.worktreeinclude
+# END: From <https://searchfox.org/firefox-main/rev/50abc35bf42ac7aede2b0a18f3cd10c266cc41d5/.gitignore#408-417>
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,jupyternotebooks
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,jupyternotebooks

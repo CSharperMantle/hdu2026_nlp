@@ -1,6 +1,17 @@
 version = 1
 revision = 3
 requires-python = ">=3.14"
+resolution-markers = [
+    "sys_platform == 'win32'",
+    "sys_platform != 'win32'",
+]
+
+[manifest]
+members = [
+    "exp-1",
+    "exp-2",
+    "hdu2026-nlp",
+]
 
 [[package]]
 name = "appnope"
@@ -145,6 +156,56 @@ wheels = [
 ]
 
 [[package]]
+name = "exp-1"
+version = "0.1.0"
+source = { virtual = "exp_1" }
+dependencies = [
+    { name = "matplotlib" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ipykernel" },
+    { name = "ipympl" },
+    { name = "ipywidgets" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "matplotlib", specifier = ">=3.10.9" }]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "ipykernel", specifier = ">=7.2.0" },
+    { name = "ipympl", specifier = ">=0.10.0" },
+    { name = "ipywidgets", specifier = ">=8.1.8" },
+]
+
+[[package]]
+name = "exp-2"
+version = "0.1.0"
+source = { virtual = "exp_2" }
+dependencies = [
+    { name = "matplotlib" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ipykernel" },
+    { name = "ipympl" },
+    { name = "ipywidgets" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "matplotlib", specifier = ">=3.10.9" }]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "ipykernel", specifier = ">=7.2.0" },
+    { name = "ipympl", specifier = ">=0.10.0" },
+    { name = "ipywidgets", specifier = ">=8.1.8" },
+]
+
+[[package]]
 name = "fonttools"
 version = "4.63.0"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
@@ -173,26 +234,6 @@ wheels = [
 name = "hdu2026-nlp"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "matplotlib" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "ipykernel" },
-    { name = "ipympl" },
-    { name = "ipywidgets" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "matplotlib", specifier = ">=3.10.9" }]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "ipykernel", specifier = ">=7.2.0" },
-    { name = "ipympl", specifier = ">=0.10.0" },
-    { name = "ipywidgets", specifier = ">=8.1.8" },
-]
 
 [[package]]
 name = "ipykernel"
@@ -479,7 +520,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "sys_platform != 'win32'" },
 ]
 sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f" }
 wheels = [

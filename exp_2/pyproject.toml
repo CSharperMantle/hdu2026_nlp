@@ -1,0 +1,15 @@
+[project]
+name = "exp-2"
+version = "0.1.0"
+description = "Experiment 2 of hdu2026_nlp"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.10.9",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "ipympl>=0.10.0",
+    "ipywidgets>=8.1.8",
+]
