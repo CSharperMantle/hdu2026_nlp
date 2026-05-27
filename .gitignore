@@ -4,6 +4,7 @@
 **/assets/.$*.bkp
 
 scratch/
+out/
 
 # BEGIN: From <https://searchfox.org/firefox-main/rev/50abc35bf42ac7aede2b0a18f3cd10c266cc41d5/.gitignore#408-417>
 # Ignore personal preferences files
