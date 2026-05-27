@@ -1,4 +1,5 @@
 *.pdf
+!**/assets/*.pdf
 
 **/assets/.$*.bkp
 
