@@ -5,10 +5,6 @@ description = "Course work for HDU (2025-2026-2)-B050165s-01 \"Natural Language 
 readme = "README.md"
 requires-python = ">=3.14"
 
-[[tool.uv.index]]
-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
-default = true
-
 [tool.uv.workspace]
 members = [
     "exp_1",
