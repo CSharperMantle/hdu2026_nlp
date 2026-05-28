@@ -10,7 +10,7 @@ resolution-markers = [
 [manifest]
 members = [
     "exp-1",
-    "exp-2",
+    "exp-5",
     "hdu2026-nlp",
 ]
 
@@ -190,10 +190,11 @@ dev = [
 ]
 
 [[package]]
-name = "exp-2"
+name = "exp-5"
 version = "0.1.0"
-source = { virtual = "exp_2" }
+source = { virtual = "exp_5" }
 dependencies = [
+    { name = "jieba" },
     { name = "matplotlib" },
 ]
 
@@ -205,7 +206,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "matplotlib", specifier = ">=3.10.9" }]
+requires-dist = [
+    { name = "jieba", specifier = ">=0.42.1" },
+    { name = "matplotlib", specifier = ">=3.10.9" },
+]
 
 [package.metadata.requires-dev]
 dev = [
