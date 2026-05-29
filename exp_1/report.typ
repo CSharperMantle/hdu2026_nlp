@@ -51,12 +51,14 @@ HMM 由三组参数完全决定@jurafsky2025。初始概率 $pi_s$ 表示第一�
 
 给定观测序列 $O = o_1 o_2 ... o_T$，Viterbi 算法@viterbi1967 通过动态规划求解最可能的状态序列 $Q$：
 
-$
-"初期化"  & quad P(1,s) = pi_s + b_s(o_1), \
-"递推"    & quad P(t,s) = max_r [P(t-1,r) + a_(r,s)] + b_s(o_t), \
-"回溯"    & quad q_T = "arg" "max"_s P(T,s), \
-          & quad q_t = Gamma(t+1,q_(t+1)).
-$
+#equation(
+  $
+    "初期化"  & quad P(1,s) = pi_s + b_s(o_1), \
+    "递推"    & quad P(t,s) = max_r [P(t-1,r) + a_(r,s)] + b_s(o_t), \
+    "回溯"    & quad q_T = "arg" "max"_s P(T,s), \
+              & quad q_t = Gamma(t+1,q_(t+1)).
+  $
+)
 
 其中 $P(t,s)$ 表示到时刻 $t$ 且当前状态为 $s$ 时的最大对数概率，$Gamma(t,s)$ 记录该最大值的前一时刻状态。
 
@@ -66,11 +68,13 @@ $
 
 为避免未在训练集中出现的（即频数为0的）转移或发射干扰模型，本实验采用 Laplace 平滑方法@jurafsky2025：
 
-$
-hat(pi)_s &= (c_"init" (s) + lambda) / (N + lambda S), \
-hat(a)_(s,t) &= (c_"trans" (s,t) + lambda) / (sum_u c_"trans" (s,u) + lambda S), \
-hat(b)_s(o) &= (c_"emit" (s,o) + lambda) / (sum_v c_"emit" (s,v) + lambda V).
-$
+#equation(
+  $
+    hat(pi)_s &= (c_"init" (s) + lambda) / (N + lambda S), \
+    hat(a)_(s,t) &= (c_"trans" (s,t) + lambda) / (sum_u c_"trans" (s,u) + lambda S), \
+    hat(b)_s(o) &= (c_"emit" (s,o) + lambda) / (sum_v c_"emit" (s,v) + lambda V).
+  $
+)
 
 其中 $lambda$ 为平滑参数，实验中取 1.0。$S$ 为状态数 4，$V$ 为词汇表大小，$N$ 为句子总数。
 
@@ -219,9 +223,7 @@ $
   ]
 ]
 
-= 结果分析与实验体会
-
-== 结果分析
+= 结果分析
 
 从上述实验结果可以看出，基于 HMM 的中文分词方案能够实现基本的分词功能，并从训练语料中学习到词边界的一般规律，如状态转移的合法性约束、常见字与标签的关联等。然而其性能存在明显的局限性。
 
@@ -233,7 +235,7 @@ $
 
 尽管如此，HMM 分词的价值在于其原理清晰、实现简单。它展示了从序列标注角度解决分词问题的基本框架，为理解更复杂的模型如 CRF、BiLSTM-CRF 和基于 Transformer 的模型奠定了基础。
 
-== 实验体会
+= 实验体会
 
 通过本次实验，我对序列标注范式的通用性有了更深入的认识。SBME 方案巧妙地将非结构化的分词任务转化为结构化预测问题。其代表了一系列将分词、词性标注、命名实体识别等任务统一为序列标注问题的启发性的思路。概率模型的数值实现细节同样值得关注：对数空间运算是 HMM 工程实现中的关键细节，若不处理，会导致长句子的浮点数下溢；Laplace 平滑运算代价低廉，又能够高效避免零概率问题。HMM 模型局限性的根源在于 HMM 的观测独立假设与一阶马尔可夫假设是其性能瓶颈的根本原因，这让我体会到模型假设与表达能力之间的权衡关系。
 
