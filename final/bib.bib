@@ -1,0 +1,129 @@
+@inproceedings{khanna2007diff3,
+  author = {Khanna, Sanjeev and Kunal, Keshav and Pierce, Benjamin C.},
+  title = {A formal investigation of Diff3},
+  year = {2007},
+  isbn = {3540770496},
+  publisher = {Springer-Verlag},
+  address = {Berlin, Heidelberg},
+  abstract = {The diff3 algorithm is widely considered the gold standard formerging uncoordinated changes to list-structured data such as text files. Surprisingly, its fundamental properties have never been studied in depth.We offer a simple, abstract presentation of the diff3 algorithm and investigate its behavior. Despite abundant anecdotal evidence that people find diff3's behavior intuitive and predictable in practice, characterizing its good properties turns out to be rather delicate: a number of seemingly natural intuitions are incorrect in general. Our main result is a careful analysis of the intuition that edits to "well-separated" regions of the same document are guaranteed never to conflict.},
+  booktitle = {Proceedings of the 27th International Conference on Foundations of Software Technology and Theoretical Computer Science},
+  pages = {485–496},
+  numpages = {12},
+  location = {New Delhi, India},
+  series = {FSTTCS'07}
+}
+
+@inproceedings{falleri2014gumtree,
+  author = {Falleri, Jean-R\'{e}my and Morandat, Flor\'{e}al and Blanc, Xavier and Martinez, Matias and Monperrus, Martin},
+  title = {Fine-grained and accurate source code differencing},
+  year = {2014},
+  isbn = {9781450330138},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2642937.2642982},
+  doi = {10.1145/2642937.2642982},
+  abstract = {At the heart of software evolution is a sequence of edit actions, called an edit script, made to a source code file. Since software systems are stored version by version, the edit script has to be computed from these versions, which is known as a complex task. Existing approaches usually compute edit scripts at the text granularity with only add line and delete line actions. However, inferring syntactic changes from such an edit script is hard. Since moving code is a frequent action performed when editing code, it should also be taken into account. In this paper, we tackle these issues by introducing an algorithm computing edit scripts at the abstract syntax tree granularity including move actions. Our objective is to compute edit scripts that are short and close to the original developer intent. Our algorithm is implemented in a freely-available and extensible tool that has been intensively validated.},
+  booktitle = {Proceedings of the 29th ACM/IEEE International Conference on Automated Software Engineering},
+  pages = {313–324},
+  numpages = {12},
+  keywords = {tree differencing, software evolution, program comprehension, ast},
+  location = {Vasteras, Sweden},
+  series = {ASE '14}
+}
+
+@ARTICLE{larsen2023spork,
+  author={Larsén, Simon and Falleri, Jean-Rémy and Baudry, Benoit and Monperrus, Martin},
+  journal={IEEE Transactions on Software Engineering}, 
+  title={Spork: Structured Merge for Java With Formatting Preservation}, 
+  year={2023},
+  volume={49},
+  number={1},
+  pages={64-83},
+  keywords={Codes;Java;Merging;Syntactics;Semantics;Computer languages;Time complexity;Version control;structured merge},
+  doi={10.1109/TSE.2022.3143766}
+}
+
+@article{zhang1989simple,
+  author = {Zhang, Kaizhong and Shasha, Dennis},
+  title = {Simple Fast Algorithms for the Editing Distance between Trees and Related Problems},
+  journal = {SIAM Journal on Computing},
+  volume = {18},
+  number = {6},
+  pages = {1245-1262},
+  year = {1989},
+  doi = {10.1137/0218082},
+  URL = {https://doi.org/10.1137/0218082},
+  eprint = {https://doi.org/10.1137/0218082},
+  abstract = { Ordered labeled trees are trees in which the left-to-right order among siblings is significant. The distance between two ordered trees is considered to be the weighted number of edit operations (insert, delete, and modify) to transform one tree to another. The problem of approximate tree matching is also considered. Specifically, algorithms are designed to answer the following kinds of questions:1. What is the distance between two trees? 2. What is the minimum distance between \$T\_1 \$ and \$T\_2 \$ when zero or more subtrees can be removed from \$T\_2 \$? 3. Let the pruning of a tree at node n mean removing all the descendants of node n. The analogous question for prunings as for subtrees is answered.A dynamic programming algorithm is presented to solve the three questions in sequential time \$O(|T\_1 | \times |T\_2 | \times \min ({\textit{depth}}(T\_1 ),{\textit{leaves}}(T\_1 )) \times \min ({\textit{depth}}(T\_2 ),{\textit{leaves}}(T\_2 )))\$ and space \$O(|T\_1 | \times |T\_2 |)\$ compared with \$O(|T\_1 | \times |T\_2 | \times ({\textit{depth}}(T\_1 ))^2 \times ({\textit{depth}}(T\_2 ))^2 )\$ for the best previous published algorithm due to Tai [J. Assoc. Comput. Mach., 26 (1979), pp, 422-433]. Further, the algorithm presented here can be parallelized to give time \$O(|T\_1 | \times |T\_2 |)\$. }
+}
+
+@inproceedings{qi2020stanza,
+  title = "{S}tanza: A Python Natural Language Processing Toolkit for Many Human Languages",
+  author = "Qi, Peng  and
+    Zhang, Yuhao  and
+    Zhang, Yuhui  and
+    Bolton, Jason  and
+    Manning, Christopher D.",
+  editor = "Celikyilmaz, Asli  and
+    Wen, Tsung-Hsien",
+  booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: System Demonstrations",
+  month = jul,
+  year = "2020",
+  address = "Online",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2020.acl-demos.14/",
+  doi = "10.18653/v1/2020.acl-demos.14",
+  pages = "101--108",
+  abstract = "We introduce Stanza, an open-source Python natural language processing toolkit supporting 66 human languages. Compared to existing widely used toolkits, Stanza features a language-agnostic fully neural pipeline for text analysis, including tokenization, multi-word token expansion, lemmatization, part-of-speech and morphological feature tagging, dependency parsing, and named entity recognition. We have trained Stanza on a total of 112 datasets, including the Universal Dependencies treebanks and other multilingual corpora, and show that the same neural architecture generalizes well and achieves competitive performance on all languages tested. Additionally, Stanza includes a native Python interface to the widely used Java Stanford CoreNLP software, which further extends its functionality to cover other tasks such as coreference resolution and relation extraction. Source code, documentation, and pretrained models for 66 languages are available at \url{https://stanfordnlp.github.io/stanza/}."
+}
+
+@inproceedings{vamvas2023towards,
+  title = "Towards Unsupervised Recognition of Token-level Semantic Differences in Related Documents",
+  author = "Vamvas, Jannis  and
+    Sennrich, Rico",
+  editor = "Bouamor, Houda  and
+    Pino, Juan  and
+    Bali, Kalika",
+  booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+  month = dec,
+  year = "2023",
+  address = "Singapore",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2023.emnlp-main.835/",
+  doi = "10.18653/v1/2023.emnlp-main.835",
+  pages = "13543--13552",
+  abstract = "Automatically highlighting words that cause semantic differences between two documents could be useful for a wide range of applications. We formulate recognizing semantic differences (RSD) as a token-level regression task and study three unsupervised approaches that rely on a masked language model. To assess the approaches, we begin with basic English sentences and gradually move to more complex, cross-lingual document pairs. Our results show that an approach based on word alignment and sentence-level contrastive learning has a robust correlation to gold labels. However, all unsupervised approaches still leave a large margin of improvement."
+}
+
+@article{barzilay2005sentence,
+  title     = {Sentence Fusion for Multidocument News Summarization},
+  author    = {Barzilay, Regina and McKeown, Kathleen R.},
+  journal   = {Computational Linguistics},
+  volume    = {31},
+  number    = {3},
+  pages     = {297--328},
+  year      = {2005},
+  doi       = {10.1162/089120105774321091},
+}
+
+@software{delpeuch2023mergiraf,
+  author    = {Delpeuch, Antonin},
+  title     = {Mergiraf},
+  year      = {2023},
+  url       = {https://mergiraf.org/architecture.html},
+  version   = {0.4},
+}
+
+@software{nimai2023betterprompt,
+  author    = {Nim AI},
+  title     = {betterprompt},
+  year      = {2023},
+  url       = {https://www.npmjs.com/package/@nim-ai/betterprompt},
+}
+
+@software{pytest,
+  author    = {Holger Krekel and {The pytest-dev team}},
+  title     = {pytest: helps you write better programs},
+  year      = {2015},
+  url       = {https://github.com/pytest-dev/pytest},
+}
