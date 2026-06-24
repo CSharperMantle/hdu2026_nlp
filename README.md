@@ -13,8 +13,8 @@ HDU (2025-2026-2)-B050165s-01《自然语言处理》课程作业（WIP）
   * [x] 基于朴素贝叶斯的方法
   * [x] [exp_5.ipynb](exp_5/exp_5.ipynb)
   * [x] [report.typ](exp_5/report.typ)
-* ???：WIP（期末作业）
-  * ???
+* [final/](final/)：基于依存树的自然语言三路合并
+  * [ ] [semdiff3](https://github.com/CSharperMantle/semdiff3)
   * [ ] report.typ
 
 ## 许可
