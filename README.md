@@ -1,6 +1,6 @@
 # hdu2026_nlp
 
-HDU (2025-2026-2)-B050165s-01《自然语言处理》课程作业（WIP）
+HDU (2025-2026-2)-B050165s-01《自然语言处理》课程作业
 
 ## 项目结构
 
@@ -14,8 +14,8 @@ HDU (2025-2026-2)-B050165s-01《自然语言处理》课程作业（WIP）
   * [x] [exp_5.ipynb](exp_5/exp_5.ipynb)
   * [x] [report.typ](exp_5/report.typ)
 * [final/](final/)：基于依存树的自然语言三路合并
-  * [ ] [semdiff3](https://github.com/CSharperMantle/semdiff3)
-  * [ ] report.typ
+  * [x] [semdiff3](https://github.com/CSharperMantle/semdiff3)
+  * [x] [report.typ](final/report.typ)
 
 ## 许可
 
